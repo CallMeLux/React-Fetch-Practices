@@ -24,6 +24,7 @@ const Search = () => {
             setUser(response.data)
         })
     }
+    
 
 
     //a function to fetch todos based on the current user
@@ -59,6 +60,7 @@ const Search = () => {
         <>
             <input placeholder="1-10" data-testid="searchInput" ref={id}></input>
             <button onClick={fetchUsers} data-testid="search-user-button">Search Users</button>
+
             {user.length > 0 && (
                 <ul>
                     {user.map(user => (
