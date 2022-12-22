@@ -1,6 +1,20 @@
 import { useRef, useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import { Button } from "@mui/material";
+import styled from 'styled-components';
+
+//stylings
+
+const StyledInput = styled.input`
+  
+  margin: 20px 20px;
+  border: 1px solid lightblue;
+  
+`;
+
+
+
 
 //the component function
 const Search = () => {
@@ -58,25 +72,43 @@ const Search = () => {
         //attempting to style and format the information
 
         <>
-            <input placeholder="1-10" data-testid="searchInput" ref={id}></input>
-            <button onClick={fetchUsers} data-testid="search-user-button">Search Users</button>
+            <StyledInput placeholder="1-10" data-testid="searchInput" ref={id} />
+            <Button 
+                variant="contained" 
+                color ="primary" 
+                size="small"
+                onClick={fetchUsers} data-testid="search-user-button">Search Users
+            </Button>
 
             {user.length > 0 && (
+                
                 <ul>
                     {user.map(user => (
-                        <li key = {user.id}> 
+                        <table>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
                             
-                            <tr><th>{user.name}</th></tr>
-                        
-                            <td>{user.address.street}</td>
-                            <td>{user.email}</td>
-                            
-                        </li>
+                            <tr key = {user.id}> 
+                                
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                <td>{user.address.street}</td>
+                                
+                            </tr>
+                        </table>
                 ))}
                 </ul>
             )}
 
-                        <button onClick={fetchTodos}>Check Todos</button>
+                        {/*to be turned into a component soon */}
+                        <Button
+                            variant="outlined"
+                            color="success"
+                            size="medium"
+                            onClick={fetchTodos}>Check Todos
+                        </Button>
+
                         {todos.length > 0 && (
                             <ul>
                                 {todos.map(todos => (
