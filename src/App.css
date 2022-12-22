@@ -27,4 +27,21 @@
   color: #61dafb;
 }
 
+Table{
+  border-collapse: collapse;
+  width: 1200px;
+}
 
+th{
+  text-align: justify;
+  padding: 8px;
+  width: -100px;
+  color: blueviolet;
+}
+
+td{
+  text-align: justify;
+  padding: 8px;
+  width: -100px;
+  color: rgb(232, 228, 236);
+}
