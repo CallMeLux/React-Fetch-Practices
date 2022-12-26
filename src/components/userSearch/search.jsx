@@ -58,7 +58,7 @@ const Search = () => {
         //attempting to style and format the information
 
         <>
-            <input placeholder="1-10" data-testid="searchInput" ref={id}></input>
+            <input placeholder="1-10" data-testid="search-input" ref={id}></input>
             <button onClick={fetchUsers} data-testid="search-user-button">Search Users</button>
 
             {user.length > 0 && (
