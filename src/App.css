@@ -28,11 +28,13 @@
 }
 
 Table{
+  border: 2px solid rgb(40, 199, 51);
   border-collapse: collapse;
   width: 1200px;
 }
 
 th{
+  border: 2px solid rgb(40, 199, 51);
   text-align: justify;
   padding: 8px;
   width: -100px;
@@ -40,6 +42,7 @@ th{
 }
 
 td{
+  border: 2px solid rgb(40, 199, 51);
   text-align: justify;
   padding: 8px;
   width: -100px;

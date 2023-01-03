@@ -29,6 +29,7 @@ function App() {
       <CssBaseline />
     <div className="App">
       <center>
+        <h1>Let's Look at some Users!</h1>
       <Search />
       </center>
     </div>
