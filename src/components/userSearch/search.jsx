@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { Button } from "@mui/material";
 import styled from 'styled-components';
 import Todo from "../TodoList/todo";
+
+
 //stylings
 
 const StyledInput = styled.input`
@@ -59,7 +61,7 @@ const Search = () => {
 
     //for page refresh
     useEffect(() => {
-
+       
     }, [])
 
     return (

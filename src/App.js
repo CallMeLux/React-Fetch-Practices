@@ -9,9 +9,9 @@ const theme = createTheme({
   palette: {
     // values for page theme
     background: {
-      default: grey[900],
+      default: grey[700],
       paper: '101010',
-      grid: grey[900]
+      grid: grey[700]
     },
     text: {
       primary: '#fff',

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "@mui/material";
 import axios from "axios";
 import { useRef, useState } from "react";
@@ -18,14 +18,18 @@ const Todo = (props) => {
     }
 
 
+    useEffect(() => {
+        
+    }, [])
 
     return (
         <>
             <Button
-                variant="outlined"
+                variant="contained"
+                sx={{m:1}}
                 color="success"
                 size="medium"
-                onClick={fetchTodos}>Check Todos
+                onClick={fetchTodos}>Check User Todos
             </Button>
 
             {todos.length > 0 && (
